@@ -1,0 +1,7 @@
+#Cross Server Chat.
+# Working variables.
+# {player} - WIll be replaced with the players name.
+# {message} - Will be replaced with the players message.
+
+format: '&e[&7{player}&e] &f{message}'
+ListenFor: '!cross'
