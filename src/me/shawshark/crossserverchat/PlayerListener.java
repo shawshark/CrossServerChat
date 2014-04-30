@@ -21,7 +21,7 @@ public class PlayerListener implements Listener {
 		/* If player doesn't have permissions, return. */
 		if(!player.hasPermission("Crosschat.use")) {
 			event.setCancelled(true);
-			player.sendMessage(ChatColor.DARK_BLUE + "[Cross-Server-Chat] You don't have permissions to use '!cross'");
+			player.sendMessage(ChatColor.DARK_BLUE + "[Cross-Server-Chat] You don't have permissions to use '"+CrossServerChat.ListenFor+"'");
 			return;
 		}
 		
