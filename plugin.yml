@@ -1,0 +1,5 @@
+name: CrossServerChat
+main: me.shawshark.crossserverchat.CrossServerChat
+version: 1.0
+
+depend: [LilyPad-Connect]
