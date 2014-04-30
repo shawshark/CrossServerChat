@@ -22,9 +22,9 @@ public class CrossServerChat extends JavaPlugin {
 	
 	public void onEnable() {
 		
-		saveDefaultConfig();
+	    saveDefaultConfig();
 		
-		format = ChatColor.translateAlternateColorCodes('&', getConfig().getString("format"));
+	    format = ChatColor.translateAlternateColorCodes('&', getConfig().getString("format"));
 		
 	    connect = Bukkit.getServer().getServicesManager().getRegistration(Connect.class).getProvider();
 	    connect.registerEvents(new LilyListener());
@@ -41,16 +41,16 @@ public class CrossServerChat extends JavaPlugin {
 	}
 	
 	public void onDisable() {
-		connect.unregisterEvents(new LilyListener());
-		connect = null;
+	   connect.unregisterEvents(new LilyListener());
+	   connect = null;
 	}
 	
 	public static void messageRequest(String message) {
-		try {
+	   try {
         	MessageRequest request = new MessageRequest(Collections.<String> emptyList(), channel, message);
-            connect.request(request); 
-        } catch (UnsupportedEncodingException | RequestException e) {
+            	connect.request(request); 
+           } catch (UnsupportedEncodingException | RequestException e) {
         	e.printStackTrace();
-        }
+           }
 	}
 }
